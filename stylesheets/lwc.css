@@ -1,0 +1,722 @@
+/* -------------------- INTRODUCTION -------------------- */
+
+/* File: stylesheets/lwc.css.
+ * Purpose: Primary style sheet for Simple MySQL Admin.
+ * Used in: stylesheets/stylesheets.php.
+ * Last reviewed/updated: 06 Apr 2018.
+ * Published: 11 Jun 2017.
+ * NOTE: Copied, unaltered, except for this introduction section, from /lwc/stylesheets/zz_lwc_no_min/lwc.css. */
+
+/* -------------------- HTML AND BODY (ENTIRE EXCEPT MEDIA QUERIES) (_html_body.scss) -------------------- */
+/* line 12, _html_body.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* line 15, _html_body.scss */
+body {
+  font-family: arial, tahoma, sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------- TYPOGRAPHY (_typography.scss) -------------------- */
+/* line 12, _typography.scss */
+pre, code, .filename, .link-lwc-logo {
+  font-family: "courier new", courier, monospace;
+}
+
+/* line 15, _typography.scss */
+kbd {
+  font-family: arial, tahoma, sans-serif;
+}
+
+/* line 19, _typography.scss */
+h1, .home-page-main-subtitle {
+  font-size: 2.4em;
+}
+
+/* line 23, _typography.scss */
+h2 {
+  font-size: 1.8em;
+}
+
+/* line 27, _typography.scss */
+h3, .link-lwc-logo, .home-page-main-fa-title {
+  font-size: 1.5em;
+}
+
+/* line 31, _typography.scss */
+h4 {
+  font-size: 1.2em;
+}
+
+/* line 35, _typography.scss */
+h5 {
+  font-size: 1.1em;
+}
+
+/* line 38, _typography.scss */
+.bcrumbs-nav, .home-page-footer, .last-reviewed, .web-browser-support {
+  font-size: 0.9em;
+}
+
+/* line 41, _typography.scss */
+.home-page-main-fa {
+  font-size: 10em;
+}
+
+/* line 45, _typography.scss */
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+}
+
+/* line 48, _typography.scss */
+caption, kbd, .tools-icon-dropdown-header, .toc-sec, .link-lwc-logo {
+  font-weight: bold;
+}
+
+/* line 51, _typography.scss */
+cite {
+  font-style: normal;
+}
+
+/* line 54, _typography.scss */
+p, li, th, td, .note, .toc-sec, .toc-sub1sec, .toc-sub2sec, .toc-sub3sec, .home-page-footer {
+  line-height: 1.75;
+}
+
+/* line 57, _typography.scss */
+pre {
+  line-height: 1.5;
+}
+
+/* line 61, _typography.scss */
+.line-height-normal, code {
+  line-height: normal;
+}
+
+/* line 65, _typography.scss */
+h1 code {
+  line-height: 1;
+}
+
+/* -------------------- MARGINS AND PADDINGS (_margins_paddings.scss) -------------------- */
+/* line 11, _margins_paddings.scss */
+p, ol, ul, table, hr, img, code, pre, footer, .note {
+  margin: 1em 0;
+}
+
+/* line 15, _margins_paddings.scss */
+h1, h2, h3, h4, h5 {
+  margin: 21px 0 14px;
+}
+
+/* line 18, _margins_paddings.scss */
+h1 {
+  margin-top: 14px;
+}
+
+/* line 21, _margins_paddings.scss */
+h2 {
+  margin-top: 28px;
+}
+
+/* line 25, _margins_paddings.scss */
+ol ol, ol ul, ol pre, ol .note, ul ol, ul ul, ul pre, ul .note {
+  margin: 0.5em 0;
+}
+
+/* line 31, _margins_paddings.scss */
+td > p, .note > p {
+  margin-top: 0;
+}
+
+/* line 37, _margins_paddings.scss */
+td > ol, td > ul, .note > ol, .note > ul {
+  margin: 0;
+}
+/* line 39, _margins_paddings.scss */
+td > ol:first-child, td > ul:first-child, .note > ol:first-child, .note > ul:first-child {
+  padding-left: 20px;
+}
+
+/* line 46, _margins_paddings.scss */
+li:last-child > ol, li:last-child > ul {
+  margin-bottom: 0;
+}
+
+/* line 51, _margins_paddings.scss */
+.home-page-main {
+  margin: 6em 0 4em;
+}
+
+/* line 54, _margins_paddings.scss */
+.home-page-main-subtitle-row {
+  margin-bottom: 3em;
+}
+
+/* line 58, _margins_paddings.scss */
+.home-page-main-fa-panel {
+  margin-bottom: 2em;
+}
+
+/* line 61, _margins_paddings.scss */
+.bcrumbs-nav {
+  margin-top: 9px;
+}
+
+/* line 64, _margins_paddings.scss */
+.web-browser-support-and-tools-icon-dropdown-container {
+  margin: 2px 0 21px;
+}
+
+/* line 67, _margins_paddings.scss */
+.tools-icon-dropdown-container {
+  margin-top: 0.5em;
+}
+
+/* line 71, _margins_paddings.scss */
+.toc-sec-title {
+  margin-left: 5em;
+}
+
+/* line 75, _margins_paddings.scss */
+.toc-sub1sec-title {
+  margin-left: 5.75em;
+}
+
+/* line 79, _margins_paddings.scss */
+.toc-sub2sec-title {
+  margin-left: 6.5em;
+}
+
+/* line 83, _margins_paddings.scss */
+.toc-sub3sec-title {
+  margin-left: 7.25em;
+}
+
+/* line 86, _margins_paddings.scss */
+.web-browser-support {
+  margin-right: 20px;
+  padding-top: 2px;
+}
+
+/* line 90, _margins_paddings.scss */
+.tools-icon-dropdown {
+  margin-top: 6px;
+  padding-left: 0px;
+}
+
+/* line 94, _margins_paddings.scss */
+caption, th, td, pre, .note {
+  padding: 0.5em;
+}
+
+/* line 97, _margins_paddings.scss */
+code {
+  padding: 1px 4px 0;
+}
+
+/* -------------------- COLORS AND BORDERS (_colors_borders.scss) -------------------- */
+/* line 11, _colors_borders.scss */
+code, pre, caption, .note {
+  background-color: #efefef;
+}
+
+/* line 14, _colors_borders.scss */
+.note code, .note pre, .note .note, pre code, caption code {
+  background-color: #d7d7d7;
+}
+
+/* line 18, _colors_borders.scss */
+.tools-icon-dropdown {
+  background-color: #fff;
+}
+
+/* line 21, _colors_borders.scss */
+.ascii-art {
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 26, _colors_borders.scss */
+h1, h2, h3, h4, h5, .home-page-main-fa {
+  color: #005a9c;
+}
+
+/* line 30, _colors_borders.scss */
+.bcrumbs-nav, .last-reviewed, .web-browser-support, .home-page-footer {
+  color: #888;
+}
+
+/* line 34, _colors_borders.scss */
+.noscript {
+  color: #c41e3a;
+}
+
+/* line 38, _colors_borders.scss */
+table {
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+/* line 42, _colors_borders.scss */
+table, caption, th, td {
+  border: 1px solid #d7d7d7;
+}
+
+/* line 45, _colors_borders.scss */
+.tools-icon-dropdown {
+  border: 1px solid #c2c2c2;
+}
+
+/* line 49, _colors_borders.scss */
+pre, .note {
+  border: 1px solid #efefef;
+}
+
+/* line 53, _colors_borders.scss */
+img {
+  border: 0;
+}
+
+/* line 56, _colors_borders.scss */
+caption {
+  border-bottom: 0;
+}
+
+/* line 59, _colors_borders.scss */
+pre, .note {
+  border-left-width: 5px;
+}
+
+/* line 62, _colors_borders.scss */
+pre, code, .note, .tools-icon-dropdown {
+  border-radius: 3px;
+}
+
+/* line 65, _colors_borders.scss */
+hr {
+  border: 0;
+  border-top: 1px solid #d7d7d7;
+}
+
+/* line 69, _colors_borders.scss */
+pre {
+  border-left-color: #aaa;
+}
+
+/* line 72, _colors_borders.scss */
+.normal {
+  border-left-color: #8ccbf2;
+}
+
+/* line 75, _colors_borders.scss */
+.important {
+  border-left-color: #e05252;
+}
+
+/* line 78, _colors_borders.scss */
+.box-shadow {
+  box-shadow: 0 1px 6px 0 #ccc;
+}
+
+/* line 81, _colors_borders.scss */
+.tools-icon-dropdown {
+  box-shadow: 0 1px 6px 3px #c2c2c2;
+}
+
+/* -------------------- HYPERLINKS, INTERACTIVE OBJECTS, AND FORM CONTROLS (_hyperlinks_interactive_objects_form_controls.scss) -------------------- */
+/* ---------- HYPERLINKS ---------- */
+/* Proper pseudo-class order: link, visited, hover, active. Focus placement optional. For buttons, place focus after hover and before active, as in link, visited, hover, focus, active. */
+/* line 17, _hyperlinks_interactive_objects_form_controls.scss */
+a {
+  color: #005a9c;
+  text-decoration: none;
+}
+/* line 20, _hyperlinks_interactive_objects_form_controls.scss */
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+/* line 24, _hyperlinks_interactive_objects_form_controls.scss */
+a:focus {
+  outline: thin dotted invert;
+}
+
+/* line 29, _hyperlinks_interactive_objects_form_controls.scss */
+.toc a {
+  color: #000;
+}
+
+/* line 35, _hyperlinks_interactive_objects_form_controls.scss */
+footer a {
+  color: #888;
+}
+/* line 37, _hyperlinks_interactive_objects_form_controls.scss */
+footer a:focus {
+  outline: 0;
+}
+
+/* line 45, _hyperlinks_interactive_objects_form_controls.scss */
+.link-list > li > a {
+  color: #000;
+  text-decoration: underline;
+}
+/* line 48, _hyperlinks_interactive_objects_form_controls.scss */
+.link-list > li > a:visited {
+  color: #888;
+}
+/* line 51, _hyperlinks_interactive_objects_form_controls.scss */
+.link-list > li > a:hover {
+  color: #888;
+  text-decoration: none;
+}
+
+/* line 59, _hyperlinks_interactive_objects_form_controls.scss */
+.link-lwc-logo {
+  color: #000;
+}
+/* line 61, _hyperlinks_interactive_objects_form_controls.scss */
+.link-lwc-logo:hover {
+  text-decoration: none;
+}
+/* line 64, _hyperlinks_interactive_objects_form_controls.scss */
+.link-lwc-logo:focus {
+  outline: 0;
+}
+
+/* line 68, _hyperlinks_interactive_objects_form_controls.scss */
+.bcrumbs-nav a {
+  color: #888;
+}
+/* line 70, _hyperlinks_interactive_objects_form_controls.scss */
+.bcrumbs-nav a:hover {
+  color: #000;
+  text-decoration: none;
+}
+/* line 74, _hyperlinks_interactive_objects_form_controls.scss */
+.bcrumbs-nav a:focus {
+  outline: 0;
+}
+
+/* ---------- INTERACTIVE OBJECTS ---------- */
+/* line 81, _hyperlinks_interactive_objects_form_controls.scss */
+.tools-icon-dropdown-header {
+  padding: 4px 12px 4px 9px;
+}
+
+/* line 84, _hyperlinks_interactive_objects_form_controls.scss */
+.tools-icon-dropdown-option {
+  padding: 4px 12px 4px 18px;
+}
+/* line 86, _hyperlinks_interactive_objects_form_controls.scss */
+.tools-icon-dropdown-option:hover {
+  background-color: #f2f2f2;
+}
+
+/* line 92, _hyperlinks_interactive_objects_form_controls.scss */
+.tools-icon-dropdown > div:first-child {
+  padding-top: 8px;
+}
+/* line 95, _hyperlinks_interactive_objects_form_controls.scss */
+.tools-icon-dropdown > div:last-child {
+  padding-bottom: 8px;
+}
+
+/* ---------- FORM CONTROLS ---------- */
+/* FORM */
+/* BUTTONS */
+/* Proper pseudo-class order: link, visited, hover, active. Focus placement optional. For buttons, place focus after hover and before active, as in link, visited, hover, focus, active. */
+/* line 112, _hyperlinks_interactive_objects_form_controls.scss */
+input[type="button"], input[type="reset"], input[type="submit"], button, .btn {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #999;
+  border-radius: 9px;
+}
+/* line 115, _hyperlinks_interactive_objects_form_controls.scss */
+input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, button:hover, .btn:hover {
+  background-color: #efefef;
+  border-color: #666;
+  cursor: pointer;
+}
+/* line 122, _hyperlinks_interactive_objects_form_controls.scss */
+input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, button:focus, .btn:focus {
+  background-color: #efefef;
+  outline: 0;
+  border-color: #666;
+}
+/* line 127, _hyperlinks_interactive_objects_form_controls.scss */
+input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active, button:active, .btn:active {
+  background-color: #d7d7d7;
+  border-color: #333;
+  cursor: pointer;
+}
+
+/* line 133, _hyperlinks_interactive_objects_form_controls.scss */
+.btn:hover {
+  text-decoration: none;
+}
+
+/* line 136, _hyperlinks_interactive_objects_form_controls.scss */
+.btn-xs {
+  font-size: 0.7em;
+  padding: 4px 8px;
+}
+
+/* line 140, _hyperlinks_interactive_objects_form_controls.scss */
+.btn-sm {
+  font-size: 0.85em;
+  padding: 5px 10px;
+}
+
+/* line 144, _hyperlinks_interactive_objects_form_controls.scss */
+.btn-md {
+  font-size: 1.0em;
+  padding: 6px 12px;
+}
+
+/* line 148, _hyperlinks_interactive_objects_form_controls.scss */
+.btn-lg {
+  font-size: 1.15em;
+  padding: 7px 14px;
+}
+
+/* line 152, _hyperlinks_interactive_objects_form_controls.scss */
+.btn-xl {
+  font-size: 1.3em;
+  padding: 8px 16px;
+}
+
+/* TEXTBOXES AND TEXTAREAS */
+/* line 159, _hyperlinks_interactive_objects_form_controls.scss */
+textarea {
+  vertical-align: middle;
+}
+
+/* line 162, _hyperlinks_interactive_objects_form_controls.scss */
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+  font-family: arial, tahoma, sans-serif;
+  font-size: 13.33px;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #999;
+  border-radius: 3px;
+  padding: 4px 6px;
+}
+/* line 168, _hyperlinks_interactive_objects_form_controls.scss */
+input[type="text"]:hover, input[type="tel"]:hover, input[type="email"]:hover, textarea:hover {
+  border-color: #666;
+}
+/* line 171, _hyperlinks_interactive_objects_form_controls.scss */
+input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, textarea:focus {
+  outline: 0;
+  border-color: #666;
+}
+/* line 175, _hyperlinks_interactive_objects_form_controls.scss */
+input[type="text"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #888;
+}
+/* line 178, _hyperlinks_interactive_objects_form_controls.scss */
+input[type="text"]:-moz-placeholder, input[type="tel"]:-moz-placeholder, input[type="email"]:-moz-placeholder, textarea:-moz-placeholder {
+  color: #888;
+}
+/* line 181, _hyperlinks_interactive_objects_form_controls.scss */
+input[type="text"]::-moz-placeholder, input[type="tel"]::-moz-placeholder, input[type="email"]::-moz-placeholder, textarea::-moz-placeholder {
+  color: #888;
+  opacity: 1;
+}
+/* line 185, _hyperlinks_interactive_objects_form_controls.scss */
+input[type="text"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #888;
+}
+
+/* SELECTBOXES (DROPDOWNS) */
+/* line 192, _hyperlinks_interactive_objects_form_controls.scss */
+select {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #999;
+  border-radius: 3px;
+  padding: 4px 6px;
+}
+
+/* line 197, _hyperlinks_interactive_objects_form_controls.scss */
+select:hover {
+  border-color: #666;
+}
+
+/* line 200, _hyperlinks_interactive_objects_form_controls.scss */
+select:focus {
+  outline: 0;
+  border-color: #666;
+}
+
+/* CHECKBOXES AND RADIO BUTTONS */
+/* line 207, _hyperlinks_interactive_objects_form_controls.scss */
+input[type="checkbox"], input[type="radio"] {
+  display: none;
+}
+
+/* line 210, _hyperlinks_interactive_objects_form_controls.scss */
+label input[type="checkbox"] ~ span, label input[type="radio"] ~ span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 12px;
+  color: transparent;
+  text-align: center;
+  border: 2px solid #999;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  margin-bottom: 3px;
+}
+
+/* line 225, _hyperlinks_interactive_objects_form_controls.scss */
+label input[type="checkbox"] ~ span {
+  border-radius: 2px;
+}
+
+/* line 228, _hyperlinks_interactive_objects_form_controls.scss */
+label input[type="radio"] ~ span {
+  border-radius: 12px;
+}
+
+/* line 231, _hyperlinks_interactive_objects_form_controls.scss */
+label input[type="checkbox"]:checked ~ span, label input[type="radio"]:checked ~ span {
+  color: inherit;
+}
+
+/* line 234, _hyperlinks_interactive_objects_form_controls.scss */
+label:hover input[type="checkbox"] ~ span, label:hover input[type="radio"] ~ span {
+  border-color: #666;
+  cursor: default;
+}
+
+/* MISCELLANEOUS */
+/* line 242, _hyperlinks_interactive_objects_form_controls.scss */
+.highlight-invalid-from-element {
+  background-color: #fcc !important;
+}
+
+/* -------------------- MISCELLANEOUS (_miscellaneous.scss) -------------------- */
+/* line 11, _miscellaneous.scss */
+img, header, main, footer, noscript {
+  display: block;
+}
+
+/* line 14, _miscellaneous.scss */
+footer img {
+  display: inline;
+}
+
+/* line 17, _miscellaneous.scss */
+.display-none {
+  display: none;
+}
+
+/* line 20, _miscellaneous.scss */
+.float-left, .toc-num {
+  float: left;
+}
+
+/* line 23, _miscellaneous.scss */
+.clear-both, .toc > div {
+  clear: both;
+}
+
+/* line 26, _miscellaneous.scss */
+.tools-icon-dropdown-container {
+  display: inline-block;
+  position: relative;
+}
+
+/* line 30, _miscellaneous.scss */
+.tools-icon-dropdown {
+  position: absolute;
+  white-space: nowrap;
+  list-style-type: none;
+}
+
+/* line 35, _miscellaneous.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 38, _miscellaneous.scss */
+.vertical-align-top {
+  vertical-align: top;
+}
+
+/* line 41, _miscellaneous.scss */
+.text-align-center, .home-page-main-subtitle-row, .home-page-main-fa-row, .home-page-footer {
+  text-align: center;
+}
+
+/* line 44, _miscellaneous.scss */
+.text-align-right {
+  text-align: right;
+}
+
+/* line 48, _miscellaneous.scss */
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* line 53, _miscellaneous.scss */
+ul {
+  list-style-type: disc;
+}
+
+/* line 56, _miscellaneous.scss */
+.cursor-pointer, .tools-icon-dropdown-option {
+  cursor: pointer;
+}
+
+/* -------------------- MEDIA QUERIES (_media_queries.scss) -------------------- */
+/* ---------- HTML AND BODY ---------- */
+/* ---------- TYPOGRAPHY ---------- */
+/* ---------- MARGINS AND PADDINGS ---------- */
+@media (min-width: 816px) {
+  /* line 18, _media_queries.scss */
+  .tools-icon-dropdown-container {
+    margin-top: 0;
+  }
+}
+@media (min-width: 816px) {
+  /* line 23, _media_queries.scss */
+  .tools-icon-dropdown {
+    margin-top: 3px;
+  }
+}
+/* ---------- COLORS AND BORDERS ---------- */
+@media (min-width: 816px) {
+  /* line 31, _media_queries.scss */
+  .tools-icon-dropdown {
+    border: 1px solid #d7d7d7;
+  }
+}
+@media (min-width: 816px) {
+  /* line 36, _media_queries.scss */
+  .tools-icon-dropdown {
+    box-shadow: 0 1px 6px 0 #ccc;
+  }
+}
+/* ---------- HYPERLINKS, INTERACTIVE OBJECTS, AND FORM CONTROLS ---------- */
+/* ---------- MISCELLANEOUS ---------- */
+@media (min-width: 816px) {
+  /* line 46, _media_queries.scss */
+  .web-browser-support, .tools-icon-dropdown-container {
+    float: left;
+  }
+}

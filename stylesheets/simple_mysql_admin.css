@@ -1,0 +1,227 @@
+/* -------------------- INTRODUCTION -------------------- */
+
+/* File: stylesheets/simple_mysql_admin.css.
+ * Purpose: Supplement/override stylesheets/lwc.css styles.
+ * Used in: stylesheets/stylesheets.php.
+ * Last reviewed/updated: 06 Apr 2018.
+ * Published: 14 May 2017. */
+
+/* -------------------- HTML AND BODY (ENTIRE EXCEPT VIEWPORT) -------------------- */
+body {
+  margin: 0 auto;
+  padding: 1em;
+}
+
+/* -------------------- TYPOGRAPHY -------------------- */
+.app-name {
+  font-size: 1.67em; /* Default. Overridden in viewport section below. */
+  text-shadow: 1px 1px 1px #666;
+}
+.section-title-title {
+  font-size: 1.2em;
+}
+.section-title-title, .good, .bad, .warning {
+  font-weight: bold;
+}
+li, .last-status, .section-content-status, .line-height-custom {
+  line-height: 1.5;
+}
+
+/* -------------------- MARGINS AND PADDINGS -------------------- */
+.last-status {
+  margin-bottom: 1em;
+}
+.app-name {
+  padding-top: 12px;
+}
+.view-container {
+  padding: 1.5em 1.5em 1.5em;
+}
+.view-container > fieldset {
+  margin-bottom: 1em;
+}
+.section {
+  margin-bottom: 1.5em;
+}
+.section:last-child {
+  margin-bottom: 0;
+}
+.section-title, .section-content {
+  padding: 0.75rem 1rem;
+}
+.section-title > ul {
+  margin-bottom: 0;
+}
+fieldset {
+  padding: 0.5em 1em 1em;
+}
+fieldset legend {
+  padding: 0.25em 0.5em;
+}
+.ua-all-privs-container {
+  margin-top: 0.5em;
+}
+.ua-subcategory-checkboxes-container {
+  padding: 0 0.25em 0 0;
+}
+table {
+  margin-bottom: 0;
+}
+th, td {
+  padding: 0.25em 0.5em;
+}
+button {
+  margin-top: 1em;
+}
+.section-content-status {
+  margin: 0 0 1em;
+}
+.good, .warning, .bad {
+  margin-left: 2px;
+}
+
+/* -------------------- COLORS AND BORDERS -------------------- */
+.view-container {
+  background-color: #e2e2e2;
+  border-radius: 0 0 5px 5px;
+}
+.section {
+  background-color: #fff;
+}
+.section, table, caption, th, td {
+  border: 1px solid #ccc;
+}
+.section-title {
+  border-bottom: 1px solid #ccc;
+}
+thead, tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+fieldset {
+  border: 1px solid #aaa;
+}
+fieldset, fieldset legend {
+  border-radius: 5px;
+}
+fieldset fieldset legend {
+  border: 0;
+}
+.good {
+  color: #080;
+}
+.warning {
+  color: #aa0;
+}
+.bad {
+  color: #f00;
+}
+
+/* -------------------- HYPERLINKS, INTERACTIVE OBJECTS, AND FORM CONTROLS (ENTIRE) -------------------- */
+/* ---------- HYPERLINKS ---------- */
+a, .tab-hyperlink, .about, .about a {
+  color: #888;
+}
+.tab-hyperlink {
+  float: left;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  border-top: 3px solid #d7d7d7;
+  margin-right: 3px;
+  padding: 0.75em;
+}
+.tab-hyperlink-active {
+  border-top: 3px solid #444;
+}
+.app-name {
+  display: none; /* Default. Overridden in viewport section below. */
+  float: right;
+  color: #000
+}
+.tab-hyperlink:hover {
+  border-top: 3px solid #000;
+  cursor: pointer;
+}
+/* Highlight clicked Tabs view (views/tabs.php) tab. By default, Tabs view (views/tabs.php) tabs have a element class='tab-hyperlink' attribute. When click Tabs view (views/tabs.php) tab, simple_mysql_admin.js appends ' tab-hyperlink-active' to end of class='tab-hyperlink' attribute value. */
+.tab-hyperlink-active, .tab-hyperlink:hover {
+  background-color: #e2e2e2;
+  color: #000;
+}
+.tab-hyperlink:hover, .app-name:hover {
+  text-decoration: none;
+}
+.tab-hyperlink:focus, .app-name:focus {
+  outline: 0;
+}
+.about, .about a {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 1em;
+}
+
+/* ---------- INTERACTIVE OBJECTS ---------- */
+/* ---------- FORM CONTROLS ---------- */
+/* FORM */
+form {
+  display: inline;
+}
+
+/* BUTTONS */
+/* TEXTBOXES AND TEXTAREAS */
+input {
+  margin: 0.25em 0;
+}
+
+/* SELECTBOXES (DROPDOWNS) */
+select {
+  margin: 0.25em 0;
+}
+
+/* CHECKBOXES AND RADIO BUTTONS */
+
+/* -------------------- MISCELLANEOUS -------------------- */
+.float-right {
+  float: right;
+}
+.hidden {
+  visibility: hidden;
+}
+.view-container {
+  clear: both;
+}
+.section-title-notes-plus-minus-icons {
+  cursor: pointer;
+}
+img {
+  margin-top: 4px;
+}
+
+/* -------------------- VIEWPORT -------------------- */
+@media (min-width: 768px) {
+  body {
+    max-width: 85%;
+  }
+  .app-name {
+    display: inline;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    max-width: 70%;
+  }
+  .app-name {
+    display: inline;
+    font-size: 2em;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    max-width: 60%;
+  }
+  .app-name {
+    display: inline;
+    font-size: 2em;
+  }
+}

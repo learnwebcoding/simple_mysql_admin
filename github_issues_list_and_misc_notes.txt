@@ -1,0 +1,104 @@
+------------------
+GITHUB ISSUES LIST
+------------------
+
+Labels:
+bug
+duplicate
+enhancement
+for future consideration
+help wanted
+invalid
+no longer relevant/obsoleted
+note
+question
+to do
+wontfix
+
+5 Open Issues
+-------------
+
+Label:		for future consideration
+Title:		Characters: apparently all characters accepted in create user account | user name field and host name/IP address field
+Desc:		Apparently all characters in the create user account | user name field and host name/IP address field are accepted. For example, user name &*%*67, host name &*%*67, and IP address 999.999.999 are accepted. Perhaps add filter to only accept/not accept particular characters in particular fields.
+
+Label:		note
+Title:		Characters: uppercase letters not respected in create database | database name field
+Desc:		Uppercase letters in the create database | database name field are not respected. The respecting of uppercase letters in database (and table) names is controlled by the lower_case_table_names server system variable, whose assigned value may vary depending on the operating system and the MySQL configuration. To get the lower_case_table_names value, log into MySQL as root and issue the show variables like 'lower_case_table_names'; command. For additional information, including what each lower_case_table_names value means, see 5.1.5 Server System Variables (https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html) and 9.2.2 Identifier Case Sensitivity (https://dev.mysql.com/doc/refman/5.7/en/identifier-case-sensitivity.html).
+
+Label:		for future consideration
+Title:		SQL injection and XSS: quotation mark and apostrophe characters not handled properly in create user account | user name field
+Desc:		Quotation mark and apostrophe characters in the create user account | user name field are not handled properly. There is no apparent good reason for a field to contain quotation mark character. Can make case for user name field to contain apostrophe character (eg, O'Brien). Check all fields for handling special characters including ampersand (&), less-than sign (<), greater-than sign (>), quotation mark ("), apostrophe ('), and backslash (\). User account created with quotation mark in user name field is stored in database and is listed in user accounts table and select user account dropdown. User account created with apostrophe in user name field is stored in database and is not listed in user accounts table and select user account dropdown. Some possible solutions; 1.) mimic phpMyAdmin, 2.) use JavaScript to disallow special characters including quotation mark and apostrophe.
+
+Status:		open
+Label:		for future consideration
+Title:		XSS: PDOStatement::errorInfo[2] outputs untrusted data to HTML
+Desc:		PDOStatement::errorInfo[2] outputs untrusted data to HTML without opportunity to pass untrusted data through filter (eg, Simple MySQL Admin $index->htmlEntities() method) to reduce XSS attach surface. As long as Simple MySQL Admin is used as intended (ie, for personal use in private/Intranet/offline/development environments, not public/Internet/online/production environments), this is not an issue. Nevertheless, to reduce XSS attack surface, might consider the following: 1.) Do not use PDOStatement::errorInfo[2]. Instead use PDOStatement::errorInfo[0] or PDOStatement::errorCode to get error code with conditionals to handle most common errors, and/or 2.) use PHP custom error handling (http://php.net/manual/en/pdo.error-handling.php).
+
+Label:		wontfix
+Title:		Information disclosure: connection_credentials.php is in plain text
+Desc:		File connection_credentials.php is in plain text. As long as Simple MySQL Admin is used as intended (ie, for personal use in private/Intranet/offline/development environments, not public/Internet/online/production environments), this is not an issue.
+
+2 Closed Issues
+---------------
+
+Label:		to do
+Title:		CSS: Add styles to make app look better
+Desc:		Add styles to make app look better. In particular; 1.) cannot have textboxes stacked without space in between, and 2.) perhaps apply LWC Home styles to textboxes, dropdowns, checkboxes, radio buttons, etc.
+
+Label:		now irrelevant/unimportant/obsolete
+Title:		userAccntPrivsForm can be reset via F5 plus respond to browser pop-up
+Desc:		User Accounts | Edit User Account Privileges | userAccntPrivsForm can be reset via F5 plus respond to browser pop-up.
+
+----------
+MISC NOTES
+----------
+
+MySQL 5.7 store MySQL user account password in mysql.user table authentication_string column, not password column. In MySQL 5.7 mysql.user table, the password column has been removed; meaning, it does not exist.
+MariaDB 10.0 - 10.2 and MySQL 5.5 - 5.7 store MySQL user account 'psswrd' password as *B45...B37C.
+
+MariaDB 10.0 - 10.2 creates 'root'@'computername-pc' MySQL user account.
+MySQL 5.7.x creates 'mysql.sys'@'localhost' MySQL user account. authentication_string is THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE.
+MySQL 5.7.21 also creates 'mysql.session'@'localhost' MySQL user account. authentication_string is THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE.
+Logging into MySQL as mysql.sys or mysql.session user requires password, which is not THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE. What working password is, is unknown.
+
+MariaDB 10.0 - 10.2 stores SMA any host name as '%'.
+MySQL 5.5 - 5.7 stores SMA any host name as ''.
+MySQL 5.5 - 5.7 stores MySQL installer any host name as '%'.
+
+MariaDB 10.0 - 10.1 installer has create Anonymous account option. The Anonymous accounts are as follows:
+DB user		DB host		SMA user name	SMA host name/IP add
+''			localhost	'Any'			localhost
+''			steve-pc	'Any'			steve-pc
+MariaDB 10.2 installer does not have create Anonymous account option.
+
+MySQL 5.5.8 installer fails last configuration step (apply security settings) if create Anonymous account.
+
+Tested the following SMA v1.4
+-----------------------------
+MariaDB 10.0.10 w Anon account - yes.
+MariaDB 10.0.34 w Anon account - yes.
+MariaDB 10.1.8 w Anon account - yes.
+MariaDB 10.1.31 w Anon account - no.
+MariaDB 10.2.6 no option for Anon account - no.
+MariaDB 10.2.13 no option for Anon account - yes.
+MySQL 5.5.8 Typical | Std | wo Anon account - yes.
+MySQL 5.5.59 w Any Host (%) account - yes.
+MySQL 5.6.10 w Any Host (%) account - no.
+MySQL 5.6.39 w Any Host (%) account - no.
+MySQL 5.7.9 w Any Host (%) account - yes.
+MySQL 5.7.21 w Any Host (%) account - no.
+
+To log into MySQL as root
+-------------------------
+1.) open command prompt and navigate to mysql\bin.
+2.) type mysql -u root (password: no) or mysql -u root -p (password: yes) and press [Enter].
+3.) type password and press [Enter].
+
+Sequence of stuff to do once logged into MySQL as root
+------------------------------------------------------
+1.) show databases;
+2.) use mysql;
+3.) show tables;
+4.) describe user;
+5.) select user, host, password, authentication_string, from mysql.user; (NOTE: omit password for MySQL 5.7.)
