@@ -4,4 +4,5 @@ Simple MySQL Admin is a web-based graphical user interface (web GUI) for managin
 
 This repository contains the latest Simple MySQL Admin source code, including source code updates to be incorporated into the next release of Simple MySQL Admin. Please feel free to download, edit, and/or fork the Simple MySQL Admin source code. The .gitattributes, .gitignore, gitHubIssuesList.txt, and README.md files are GitHub or personal comment files and are not part of the Simple MySQL Admin source code.
 
-* Last reviewed/updated: 08 Apr 2018 | Published: 04 Jun 2017 | Status: Active
+* Repository last recreated from scratch to eliminate no longer needed old commits/etc: 24 Jul 2020
+* Last reviewed/updated: 24 Jul 2020 | Published: 04 Jun 2017 | Status: Active
